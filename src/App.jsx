@@ -26,6 +26,15 @@ function App() {
       return deck
     })])
   }
+  
+  const resetDeckHandler = () => {
+    const newDeckList = [...deckList]
+
+    setDeckList([...newDeckList.map(deck => {
+      deck.isEnabled = false
+      return deck
+    })])
+  }
 
   return (
     <>
@@ -33,7 +42,7 @@ function App() {
         {/* Title Component */}
         <div className='text-6xl text-center mb-6 text-teal-700 font-bold'>Union Comp</div>
         {/* Input List Component */}
-        <DeckSelection deckList={unionComp} addDeckHandler={addDeckHandler} addAllDeckHandler={addAllDeckHandler} />
+        <DeckSelection deckList={unionComp} addDeckHandler={addDeckHandler} addAllDeckHandler={addAllDeckHandler} resetDeckHandler={resetDeckHandler} />
         {/* Decks List */}
         <div className='flex justify-center mb-4 text-2xl'>
           <ul>

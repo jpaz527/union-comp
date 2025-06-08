@@ -4,20 +4,23 @@
         "title": "Kirito/Asuna",
         "anime": "Sword Art Online",
         "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_sao/img_thumbnail.png",
-        "isEnabled": false
+        "isEnabled": false,
+        "alreadyPicked": false
     },
     {
         "id": "ggo",
         "title": "Gun Gale Online",
         "anime": "Sword Art Online",
         "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_sao/img_thumbnail.png",
-        "isEnabled": false
+        "isEnabled": false,
+        "alreadyPicked": false
     },
     {
         "id": "hashira",
         "title": "Hashira",
         "anime": "Demon Slayer",
         "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
-        "isEnabled": false
+        "isEnabled": false,
+        "alreadyPicked": false
     }
 ]
