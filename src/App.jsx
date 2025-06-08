@@ -2,9 +2,26 @@ import { useState } from 'react'
 import './App.css'
 import unionComp from "./assets/unionComp.json";
 import DeckSelection from './components/DeckSelection.jsx'
+import { getRandomIntInclusive } from './utils/random.js'
 
 function App() {
   const [deckList, setDeckList] = useState([...unionComp])
+
+  const pickDeck = (selectedId) => {
+    const newDeckList = [...deckList]
+    for (let index = 0; index < newDeckList.length; index++) {
+      const deck = newDeckList[index];
+      if (selectedId === deck.id) {
+        console.log('Found deck to pick', deck);
+
+        deck.alreadyPicked = true
+        break;
+      }
+    }
+    console.log('Updated deck list', newDeckList);
+
+    setDeckList([...newDeckList])
+  }
 
   const addDeckHandler = (selectedId) => {
     const newDeckList = [...deckList]
@@ -26,7 +43,7 @@ function App() {
       return deck
     })])
   }
-  
+
   const resetDeckHandler = () => {
     const newDeckList = [...deckList]
 
@@ -36,17 +53,30 @@ function App() {
     })])
   }
 
+  const randomDeckSelection = () => {
+    const selectedDecks = deckList.filter(deck => (deck.isEnabled && !deck.alreadyPicked))
+    const randomDeckSelectionIndex = getRandomIntInclusive(0, (selectedDecks.length - 1))
+
+    const selectedId = selectedDecks[randomDeckSelectionIndex].id
+    console.log('Random selected ID: ', selectedId);
+
+    pickDeck(selectedId)
+  }
+
   return (
     <>
       <div className="@container">
         {/* Title Component */}
         <div className='text-6xl text-center mb-6 text-teal-700 font-bold'>Union Comp</div>
         {/* Input List Component */}
-        <DeckSelection deckList={unionComp} addDeckHandler={addDeckHandler} addAllDeckHandler={addAllDeckHandler} resetDeckHandler={resetDeckHandler} />
+        <DeckSelection deckList={unionComp} addDeckHandler={addDeckHandler} addAllDeckHandler={addAllDeckHandler} resetDeckHandler={resetDeckHandler} randomDeckSelection={randomDeckSelection} />
         {/* Decks List */}
         <div className='flex justify-center mb-4 text-2xl'>
           <ul>
-            {deckList.filter(deck => deck.isEnabled).map(filteredDeck => <div key={filteredDeck.id} className='flex'> <span>🟣</span><li className='mb-1 line-through'>{filteredDeck.title}</li></div>)}
+            {deckList.filter(deck => deck.isEnabled).map(filteredDeck => {
+              const css = filteredDeck.alreadyPicked ? 'mb-1 line-through' : 'mb-1'
+              return (<div key={filteredDeck.id} className='flex'> <span>🟣</span><li className={css}>{filteredDeck.title}</li></div>)
+            })}
           </ul>
         </div>
 
