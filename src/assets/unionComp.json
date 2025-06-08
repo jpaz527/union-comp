@@ -58,5 +58,85 @@
         "alreadyPicked": false,
         "player": "none",
         "round": 0
+    },
+    {
+        "id": "onePunch",
+        "title": "One Punch",
+        "anime": "One Punch Man",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "saitamaGenos",
+        "title": "Saitama/Genos",
+        "anime": "One Punch Man",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "codePizza",
+        "title": "C.C. Pizza",
+        "anime": "Code Geass",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "guren",
+        "title": "Guren",
+        "anime": "Code Geass",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "redAsta",
+        "title": "Asta",
+        "anime": "Black Clover",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "purpleBleach",
+        "title": "Purple Bleach",
+        "anime": "Bleach",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "hunterHunter",
+        "title": "Green Hunter",
+        "anime": "Hunter x Hunter",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "blueJjk",
+        "title": "Blue JJK",
+        "anime": "Jujutsu Kaisen",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
     }
 ]
