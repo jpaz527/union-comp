@@ -20,8 +20,8 @@ const DeckSelection = ({ deckList, addDeckHandler, addAllDeckHandler, resetDeckH
                 <button title='Add from list' onClick={() => { addDeckHandler(selectedDeck) }}>➕</button>
             </div>
             <div className='flex justify-center mb-4 text-center w-1/5 mx-auto gap-2'>
-                <button onClick={resetDeckHandler} className="text-red-800 border-2 hover:text-red-500 hover:font-bold p-1">Reset</button>
-                <button onClick={randomDeckSelection} className="text-teal-700 border-2 hover:text-teal-800 hover:font-bold grow">GO</button>
+                <button onClick={resetDeckHandler} className="text-red-800 border-2 hover:text-red-500 hover:font-bold p-1 rounded-lg">Reset</button>
+                <button onClick={randomDeckSelection} className="text-teal-700 border-2 hover:text-teal-800 hover:font-bold grow rounded-lg">GO</button>
             </div>
         </>
     )

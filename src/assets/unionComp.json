@@ -5,7 +5,9 @@
         "anime": "Sword Art Online",
         "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_sao/img_thumbnail.png",
         "isEnabled": false,
-        "alreadyPicked": false
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
     },
     {
         "id": "ggo",
@@ -13,7 +15,9 @@
         "anime": "Sword Art Online",
         "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_sao/img_thumbnail.png",
         "isEnabled": false,
-        "alreadyPicked": false
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
     },
     {
         "id": "hashira",
@@ -21,6 +25,38 @@
         "anime": "Demon Slayer",
         "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
         "isEnabled": false,
-        "alreadyPicked": false
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "speedOfSonic",
+        "title": "Speed of Sonic",
+        "anime": "One Punch Man",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "ashfordAcademy",
+        "title": "Ashford Academy",
+        "anime": "Code Geass",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
+    },
+    {
+        "id": "lancelot",
+        "title": "Lancelot",
+        "anime": "Code Geass",
+        "thumbnail": "https://www.unionarena-tcg.com/na/images/products/boosters/ex_kmy/img_thumbnail.png",
+        "isEnabled": false,
+        "alreadyPicked": false,
+        "player": "none",
+        "round": 0
     }
 ]

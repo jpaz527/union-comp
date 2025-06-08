@@ -4,23 +4,34 @@ import unionComp from "./assets/unionComp.json";
 import DeckSelection from './components/DeckSelection.jsx'
 import { getRandomIntInclusive } from './utils/random.js'
 
+const PLAYER_TURN = {
+  NONE: 'none',
+  RED: 'red',
+  BLUE: 'blue',
+};
+
 function App() {
   const [deckList, setDeckList] = useState([...unionComp])
+  const [playerTurn, setPlayerTurn] = useState(PLAYER_TURN.RED)
+  const [goCount, setGoCount] = useState(1)
 
   const pickDeck = (selectedId) => {
     const newDeckList = [...deckList]
     for (let index = 0; index < newDeckList.length; index++) {
       const deck = newDeckList[index];
       if (selectedId === deck.id) {
-        console.log('Found deck to pick', deck);
-
+        deck.player = playerTurn
         deck.alreadyPicked = true
+        deck.round = Math.round(goCount / 2)
+        console.log(Math.round(goCount / 2))
         break;
       }
     }
     console.log('Updated deck list', newDeckList);
 
+    setGoCount(goCount + 1)
     setDeckList([...newDeckList])
+    setPlayerTurn(playerTurn === PLAYER_TURN.RED ? PLAYER_TURN.BLUE : PLAYER_TURN.RED)
   }
 
   const addDeckHandler = (selectedId) => {
@@ -50,6 +61,9 @@ function App() {
     setDeckList([...newDeckList.map(deck => {
       deck.isEnabled = false
       deck.alreadyPicked = false
+      deck.player = PLAYER_TURN.NONE
+      deck.round = 0
+      setGoCount(1)
       return deck
     })])
   }
@@ -76,7 +90,8 @@ function App() {
           <ul>
             {deckList.filter(deck => deck.isEnabled).map(filteredDeck => {
               const css = filteredDeck.alreadyPicked ? 'mb-1 line-through' : 'mb-1'
-              return (<div key={filteredDeck.id} className='flex'> <span>🟣</span><li className={css}>{filteredDeck.title}</li></div>)
+              const icon = filteredDeck.player === PLAYER_TURN.NONE ? '🔘' : filteredDeck.player === PLAYER_TURN.RED ? '🔴' : '🔵'
+              return (<div key={filteredDeck.id} className='flex'> <span>{icon}</span><li className={css}>{filteredDeck.title}<span>{filteredDeck.round === 0 ? '' : `(${filteredDeck.round})`}</span></li></div>)
             })}
           </ul>
         </div>
