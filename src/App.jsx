@@ -49,6 +49,7 @@ function App() {
 
     setDeckList([...newDeckList.map(deck => {
       deck.isEnabled = false
+      deck.alreadyPicked = false
       return deck
     })])
   }
