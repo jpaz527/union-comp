@@ -18,13 +18,22 @@ function App() {
     setDeckList([...newDeckList])
   }
 
+  const addAllDeckHandler = () => {
+    const newDeckList = [...deckList]
+
+    setDeckList([...newDeckList.map(deck => {
+      deck.isEnabled = true
+      return deck
+    })])
+  }
+
   return (
     <>
       <div className="@container">
         {/* Title Component */}
         <div className='text-6xl text-center mb-6 text-teal-700 font-bold'>Union Comp</div>
         {/* Input List Component */}
-        <DeckSelection deckList={unionComp} addDeckHandler={addDeckHandler} />
+        <DeckSelection deckList={unionComp} addDeckHandler={addDeckHandler} addAllDeckHandler={addAllDeckHandler} />
         {/* Decks List */}
         <div className='flex justify-center mb-4 text-2xl'>
           <ul>
